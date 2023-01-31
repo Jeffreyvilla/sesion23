@@ -1,0 +1,30 @@
+<div class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Ingrese primer Valor</mat-label>
+    <input matInput placeholder="Primer valor" [(ngModel)]="valor1">
+  </mat-form-field><br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Ingrese segundo Valor</mat-label>
+    <input matInput placeholder="Segundo valor" [(ngModel)]="valor2">
+  </mat-form-field><br>
+
+  <mat-slide-toggle [(ngModel)]="suma">Sumar</mat-slide-toggle><br>
+  <mat-slide-toggle [(ngModel)]="resta">Restar</mat-slide-toggle><br>
+  <mat-slide-toggle [(ngModel)]="multiplicacion">Multiplicar</mat-slide-toggle><br>
+  <mat-slide-toggle [(ngModel)]="division">Dividir</mat-slide-toggle><br><br>
+  <button mat-raised-button color="primary" (click)="calcular()">calcular</button>
+  <br><br>
+  <div *ngIf="this.resultadoSuma">
+    La Suma es : {{resultadoSuma}}
+  </div>
+  <div *ngIf="this.resultadoResta">
+    La Resta es : {{resultadoResta}}
+  </div>
+  <div *ngIf="this.resultadoMulti">
+    La Multiplicación es : {{resultadoMulti}}
+  </div>
+  <div *ngIf="this.resultadoDivi">
+    La División es : {{resultadoDivi}}
+  </div>
+</div>
